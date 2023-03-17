@@ -3,6 +3,9 @@ module hamster
 go 1.16
 
 require (
-	github.com/mitchellh/mapstructure v1.4.3 // indirect
-	github.com/spf13/viper v1.10.1 // indirect
+	fyne.io/fyne/v2 v2.3.1
+	github.com/gocolly/colly/v2 v2.1.0 // indirect
+	github.com/mattn/go-sqlite3 v1.14.16
+	github.com/mitchellh/mapstructure v1.4.3
+	github.com/spf13/viper v1.10.1
 )
