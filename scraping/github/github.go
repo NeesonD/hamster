@@ -4,16 +4,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gocolly/colly/v2"
+	"hamster/item/github"
 	"os"
 	"strings"
 )
-
-type Repository struct {
-	Author string
-	Name   string
-	Link   string
-	Desc   string
-}
 
 const githubStarUrl = "https://github.com/forever-z-133?tab=stars"
 
@@ -24,9 +18,9 @@ func Scraping() {
 		colly.MaxDepth(1),
 	)
 
-	repos := make([]*Repository, 0)
+	repos := make([]*github.StarRepository, 0)
 	c.OnHTML(".d-lg-flex .col-12", func(e *colly.HTMLElement) {
-		repo := &Repository{}
+		repo := &github.StarRepository{}
 		text := e.ChildText("div.mb-1 > h3 > a")
 		split := strings.Split(text, "/")
 		repo.Author = strings.TrimSpace(split[0])

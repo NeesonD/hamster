@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--created on 2022-10-15 16:24:36 - tinyMediaManager 4.2.8-->
+<movie>
+  <title>血观音</title>
+  <originaltitle>血觀音</originaltitle>
+  <sorttitle/>
+  <epbookmark/>
+  <year>2017</year>
+  <ratings>
+    <rating default="false" max="10" name="themoviedb">
+      <value>6.827</value>
+      <votes>49</votes>
+    </rating>
+    <rating default="true" max="10" name="imdb">
+      <value>7.3</value>
+      <votes>3081</votes>
+    </rating>
+  </ratings>
+  <userrating>0.0</userrating>
+  <top250>0</top250>
+  <set/>
+  <plot>在女人组成的棠府里，住着3位不同世代但一样懂人心的女性，由棠夫人主持大局，穿梭权贵间，靠着高超手腕与柔软身段，在复杂的政商关系中生存取利；个性如刺猬般的大女儿棠宁为求母亲肯定，勉力配合；乖巧的小女儿棠真多半静静观察，唯母命是从。直到某天，棠家亲密友人惨遭灭门事件爆发，三人各自被牵扯其中，一向以大局为重的棠夫人，为了守护一切，费尽心机，却让三人走向不同的命运。</plot>
+  <outline>追加 \n http://aliyun</outline>
+  <tagline/>
+ </movie>
+  <runtime>112</runtime>
+  <mpaa/>
+  <certification/>
+  <id>tt7479784</id>
+  <tmdbid>478804</tmdbid>
+  <tmdbCollectionId/>
+  <uniqueid default="false" type="tmdb">478804</uniqueid>
+  <uniqueid default="true" type="imdb">tt7479784</uniqueid>
+  <country>台湾</country>
+  <status/>
+  <code/>
+  <premiered>2017-11-24</premiered>
+  <watched>false</watched>
+  <playcount>0</playcount>
+  <lastplayed/>
+  <genre>Thriller</genre>
+  <genre>Mystery</genre>
+  <studio>Atom Cinema</studio>
+  <credits>Ya-che Yang</credits>
+  <director>Ya-che Yang</director>
+  <tag>corruption</tag>
+  <tag>black money</tag>
+  <actor>
+    <name>Kara Hui</name>
+    <role>Madame Tang</role>
+    <thumb>https://image.tmdb.org/t/p/h632/6OV9kM62Y7M7EswtkpCThs0QAxg.jpg</thumb>
+    <profile>https://www.themoviedb.org/person/84205</profile>
+    <tmdbid>84205</tmdbid>
+  </actor>
+  <actor>
+    <name>Wu Ke-Xi</name>
+    <role>Tang Ning</role>
+    <thumb>https://image.tmdb.org/t/p/h632/puILdtovnRWMVHmvVDZRQ82KQGt.jpg</thumb>
+    <profile>https://www.themoviedb.org/person/1294367</profile>
+    <tmdbid>1294367</tmdbid>
+  </actor>
+  <producer>
+    <name>Wei-Jan Liu</name>
+    <role>Producer</role>
+    <thumb/>
+  </producer>
+  <producer>
+    <name>Jill Hu</name>
+    <role>Casting Director</role>
+    <thumb>https://image.tmdb.org/t/p/h632/8IZJImQVHM8WvfBO8dnRb5f4rU1.jpg</thumb>
+  </producer>
+  <trailer/>
+  <languages>广州话, 廣州話, Chinese</languages>
+  <dateadded>2022-10-15 16:19:13</dateadded>
+  <fileinfo>
+    <streamdetails>
+      <video>
+        <codec>HEVC</codec>
+        <aspect>1.78</aspect>
+        <width>1920</width>
+        <height>1080</height>
+        <durationinseconds>6721</durationinseconds>
+        <stereomode/>
+      </video>
+      <audio>
+        <codec>AC3</codec>
+        <language/>
+        <channels>2</channels>
+      </audio>
+    </streamdetails>
+  </fileinfo>
+  <!--tinyMediaManager meta data-->
+  <source>UNKNOWN</source>
+  <edition>NONE</edition>
+  <original_filename>血观音.mkv</original_filename>
+  <user_note/>
+</movie>
