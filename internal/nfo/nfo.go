@@ -6,7 +6,30 @@ import (
 	"regexp"
 )
 
-var outlineReg = regexp.MustCompile(`<outline>(.*?)</outline>`)
+const (
+	TagLine = iota
+	Plot
+)
+
+type Tag struct {
+	Reg    string
+	Format string
+}
+
+var (
+	tagMap = map[int]Tag{
+		TagLine: {
+			Reg:    "<tagline>(.*?)</tagline>",
+			Format: "<tagline>%s</tagline>",
+		},
+		Plot: {
+			Reg:    "<plot>(.*?)</plot>",
+			Format: "<plot>$1</plot>\n  <tagline>%s</tagline>",
+		},
+	}
+	taglineReg = regexp.MustCompile(tagMap[TagLine].Reg)
+	plotReg    = regexp.MustCompile(tagMap[Plot].Reg)
+)
 
 func AppendLink(filePath string, link string) {
 	file, err := ioutil.ReadFile(filePath)
@@ -14,14 +37,19 @@ func AppendLink(filePath string, link string) {
 		fmt.Println("Error reading file:", err)
 		return
 	}
-
-	// 使用正则表达式匹配<outline>和</outline>之间的文本
-	result := outlineReg.ReplaceAllString(string(file), fmt.Sprintf(`<outline>$1 link:%s</outline>`, link))
+	fs := string(file)
+	result := ""
+	match := taglineReg.FindStringSubmatch(fs)
+	if len(match) > 1 {
+		result = taglineReg.ReplaceAllString(fs, fmt.Sprintf(tagMap[TagLine].Format, link))
+	} else {
+		result = plotReg.ReplaceAllString(fs, fmt.Sprintf(tagMap[Plot].Format, link))
+	}
 
 	err = ioutil.WriteFile(filePath, []byte(result), 0644)
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println("xue.xml 文件已修改成功！")
+	fmt.Printf("%s 文件已修改成功！\n", file)
 }

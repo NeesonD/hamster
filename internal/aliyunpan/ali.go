@@ -3,6 +3,7 @@ package aliyunpan
 import (
 	"fmt"
 	jsoniter "github.com/json-iterator/go"
+	uuid "github.com/satori/go.uuid"
 	"github.com/tickstep/aliyunpan-api/aliyunpan"
 	"log"
 )
@@ -32,10 +33,18 @@ func InitALiYunClient(refreshToken string) {
 		fmt.Println("get acccess token error")
 		return
 	}
-
+	v4 := uuid.NewV4().String()
+	appConfig := aliyunpan.AppConfig{
+		AppId:     "25dqy4fbYqktFxyX",
+		DeviceId:  v4,
+		UserId:    "98d82c11bfab41a9b33bcee80c6dce37",
+		Nonce:     0,
+		PublicKey: "",
+	}
 	// pan client
-	aliYunClient = aliyunpan.NewPanClient(*webToken, aliyunpan.AppLoginToken{})
+	aliYunClient = aliyunpan.NewPanClient(*webToken, aliyunpan.AppLoginToken{}, appConfig)
 	getUserInfo()
+
 }
 
 func objToJsonStr(v interface{}) string {
@@ -88,4 +97,6 @@ func SyncAliData(depth int, filterFile map[string]struct{}) {
 		})
 	}
 	fmt.Printf("shareFile num: %d \n", len(infos))
+
+	aliYunClient.DeviceLogout()
 }
