@@ -6,7 +6,7 @@ import (
 	"regexp"
 )
 
-var outlineReg = regexp.MustCompile(`<outline>(.*?)</outline>`)
+var outlineReg = regexp.MustCompile(`<tagline>(.*?)</tagline>`)
 
 func AppendLink(filePath string, link string) {
 	file, err := ioutil.ReadFile(filePath)
@@ -16,7 +16,7 @@ func AppendLink(filePath string, link string) {
 	}
 
 	// 使用正则表达式匹配<outline>和</outline>之间的文本
-	result := outlineReg.ReplaceAllString(string(file), fmt.Sprintf(`<outline>$1 link:%s</outline>`, link))
+	result := outlineReg.ReplaceAllString(string(file), fmt.Sprintf(`<tagline>$1 link:%s</tagline>`, link))
 
 	err = ioutil.WriteFile(filePath, []byte(result), 0644)
 	if err != nil {
