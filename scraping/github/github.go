@@ -1,11 +1,10 @@
 package github
 
 import (
-	"encoding/json"
 	"fmt"
 	"github.com/gocolly/colly/v2"
 	"hamster/item/github"
-	"os"
+	"hamster/pipeline/csv"
 	"strings"
 )
 
@@ -58,8 +57,5 @@ func Scraping() {
 
 	c.Visit(githubStarUrl)
 
-	fmt.Println(len(repos))
-	f, _ := os.Create("repo.json")
-	encoder := json.NewEncoder(f)
-	encoder.Encode(repos)
+	csv.WriteCsv("github_star_repo.csv", repos)
 }

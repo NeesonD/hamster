@@ -1,8 +1,8 @@
 package github
 
 type StarRepository struct {
-	Author string
-	Name   string
-	Link   string
-	Desc   string
+	Author string `csv:"author"`
+	Name   string `csv:"name"`
+	Link   string `csv:"link"`
+	Desc   string `csv:"desc"`
 }
