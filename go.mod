@@ -10,10 +10,7 @@ require (
 	github.com/mattn/go-sqlite3 v1.14.16
 	github.com/mitchellh/mapstructure v1.4.3
 	github.com/panjf2000/ants/v2 v2.7.2
-	github.com/panjf2000/ants/v2 v2.7.1
-	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/viper v1.10.1
 	github.com/xuri/excelize/v2 v2.7.0
 )
 
-replace github.com/tickstep/aliyunpan-api v0.1.3 => github.com/NeesonD/aliyunpan-api v0.0.0-20230323092347-5d196238b60d
